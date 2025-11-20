@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แบบฟอร์มใบสมัคร</title>
+     
+
+</head>
+<body>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <p>1. ชื่อ - สกุล: <input type="text" name="fullname" required></p>
+        <p>2. อายุ: <input type="number" name="age" min="15" required></p>
+        
+        <fieldset>
+            <legend>ข้อมูลที่อยู่</legend>
+            <p>3. ที่อยู่เลขที่: <input type="text" name="addr_no" required></p>
+            <p>4. ตำบล/แขวง: <input type="text" name="subdistrict" required></p>
+            <p>5. อำเภอ/เขต: <input type="text" name="district" required></p>
+            <p>6. จังหวัด: <input type="text" name="province" required></p>
+            <p>7. รหัสไปรษณีย์: <input type="text" name="zipcode" pattern="\d{5}" required></p>
+        </fieldset>
+        
+        <p>8. เบอร์โทร: <input type="tel" name="phone" required></p>
+        <p>9. Email: <input type="email" name="email" required></p>
+
+        <p>11. Username: <input type="text" name="username" required></p>
+        <p>10, 12. รหัสผ่าน: <input type="password" name="password" required></p>
+        
+        <p>13. แนบรูปภาพ: <input type="file" name="photo" accept="image/*" required></p>
+        
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
