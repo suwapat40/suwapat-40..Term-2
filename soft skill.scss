@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบงานที่ 4 - CSS Text Animation</title>
+    <style>
+        /* ตั้งค่าพื้นหลังและฟอนต์ */
+        body {
+            background-color: #1a1a2e; /* สีน้ำเงินเข้มดูแพง */
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Animation สำหรับชื่อ: ค่อยๆ ขยายและจางขึ้นมา */
+        .name-animation {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInScale 1.5s ease-out forwards;
+        }
+
+        /* Animation สำหรับ Soft Skill: เลื่อนจากซ้ายไปขวา */
+        .skill-animation {
+            font-size: 1.5rem;
+            color: #4ecca3; /* สีเขียวมิ้นต์ตัดกับพื้นหลัง */
+            opacity: 0;
+            animation: slideInRight 1s ease-out 1s forwards; /* เริ่มหลังจากชื่อ 1 วินาที */
+        }
+
+        /* กำหนดรูปแบบการเคลื่อนไหว (Keyframes) */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* เอฟเฟกต์แสงเงาให้ตัวหนังสือดูมีมิติ */
+        .glow {
+            text-shadow: 0 0 10px #4ecca3, 0 0 20px #4ecca3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="name-animation">
+        นางสาวสุวภัทร ปิงเมือง
+    </div>
+
+    <div class="skill-animation">
+        Soft Skill : <span class="glow">การปรับตัวและการสื่อสาร</span>
+    </div>
+
+</body>
+</html>
